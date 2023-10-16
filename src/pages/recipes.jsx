@@ -4,7 +4,7 @@ import { Button } from '@mui/material'
 import NavBar from '../components/nav_bar'
 import LogoUSM from '../assets/usm.png'
 
-export const InternalPage = () => {
+export const RecipesPage = () => {
   return (
     <div className='page'>
       <h1 className='page__title'>Frontend Sample App</h1>
@@ -16,4 +16,4 @@ export const InternalPage = () => {
   )
 }
 
-export default InternalPage
+export default RecipesPage
