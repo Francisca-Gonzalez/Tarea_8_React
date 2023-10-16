@@ -12,7 +12,7 @@ export const CalendarPage = () => {
       <NavBar />
       <Container sx={"display: flex; margin-top: 150px"}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateCalendar showDaysOutsideCurrentMonth fixedWeekNumber={2} />
+          <DateCalendar />
         </LocalizationProvider>
       </Container>
     </Container>

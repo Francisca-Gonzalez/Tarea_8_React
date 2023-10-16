@@ -11,12 +11,9 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Inicio', 'Hoy', 'Calendario', 'Recetas'];
 const settings = ['Perfil', 'Ajustes', 'Cerrar sesión'];
 
 function ResponsiveAppBar() {
@@ -38,15 +35,11 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-  const handleClickMenu = (page) => {
-    console.log(`${page}`)
-  };
-
   return (
     <AppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src={LogoMenu} height={100} alt='logo menu' /><br />
+          <img src={LogoMenu} height={100} alt='logo menu' /><br />
           <Typography
             variant="h6"
             noWrap
@@ -93,22 +86,41 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+              > Inicio
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+              > Hoy
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/calendario'
+              > Calendario
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
+              > Recetas
+              </NavLink>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+            > Inicio
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+            > Hoy
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/calendario'
+            > Calendario
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
+            > Recetas
+            </NavLink>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -133,11 +145,18 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+              > Perfil
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+              > Ajustes
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+              > Cerrar sesión
+              </NavLink>
             </Menu>
           </Box>
         </Toolbar>
