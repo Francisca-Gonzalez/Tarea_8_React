@@ -14,8 +14,8 @@ export const RecipesPage = () => {
   return (
     <Container>
       <NavBar />
-      <h1>Busca recetas</h1>
       <SearchBar />
+      <h1>Busca por recetas, ingredientes o momentos del día</h1>
     </Container>
 
   )
