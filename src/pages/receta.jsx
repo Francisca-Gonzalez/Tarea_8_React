@@ -46,6 +46,13 @@ export const receta = () => {
         <div>
         <img src={url}  />
         <h1>{getRandomOption(Desayuno)}</h1>
+        <button
+          style={{
+            width: '40px',
+            height: '40px',
+            backgroundColor: 'lightblue',
+            borderRadius: '50%',
+            border: 'none',}}>+</button>
         <h2>Ingredientes:</h2>
 
         <p>{getRandomOption(Ingredientes)}</p>
