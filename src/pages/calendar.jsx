@@ -53,9 +53,10 @@ import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 
 const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const Desayuno = ["Cereal", "Yogur", "Manzana", "Tostadas", "Diet cola", "Tacos"];
-  const Almuerzo = ["Fideos con Salsa", "Pizza", "Ensalada", "Sándwich", "Hamburguesa", "Tacos"];
-  const Cena = ["Fideos con Salsa", "Pizza", "Ensalada", "Sándwich", "Hamburguesa", "Tacos"];
+  const Desayuno = ["Avena", "Yogur con frutas y nueces", "Tostadas integrales con PALTA y huevo", "Batido de proteínas", "Tofu revuelto con verduras"]
+  const Almuerzo = ["Ensalada de pollo con verduras frescas", "Salmón a la parrilla con espárragos y quinua", "Tacos de pavo con guacamole y POROTOS negros", "Pasta integral con brócoli y salsa de tomate casera", "Bowl de arroz integral con tofu, PALTA y vegetales asados"]
+  const Cena = ["Salmón al horno con espárragos y quinua", "Ensalada de atún con PALTA y vegetales frescos", "Pollo a la parrilla con brócoli y PAPAS al horno", "Sopa de lentejas con espinacas y pan integral", "Tacos de pavo con lechuga y salsa de PALTA"]
+  const Ingredientes = []
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
@@ -79,6 +80,7 @@ const CalendarPage = () => {
           <h2>Comida del día</h2>
           {selectedDate ? (
             <div>
+              <p>{selectedDate.toString()}</p>
               <p>{getRandomOption(Desayuno)}</p>
               <p>{getRandomOption(Almuerzo)}</p>
               <p>{getRandomOption(Cena)}</p>

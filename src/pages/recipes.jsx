@@ -14,10 +14,10 @@ export const RecipesPage = () => {
   return (
     <Container>
       <NavBar />
-      
+      <h1>Busca recetas</h1>
       <SearchBar />
     </Container>
-    
+
   )
 }
 
