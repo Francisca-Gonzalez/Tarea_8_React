@@ -102,6 +102,10 @@ function ResponsiveAppBar() {
                 className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
               > Recetas
               </NavLink>
+              {/* <NavLink
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/RecetaPages'
+              > Recetaaaaaaa
+              </NavLink> */}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -121,6 +125,10 @@ function ResponsiveAppBar() {
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
             > Recetas
             </NavLink>
+            {/* <NavLink
+              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/RecetaPages'
+            > Recetaaaaaaa
+            </NavLink> */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -146,7 +154,7 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               <NavLink
-              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
+                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
               > Perfil
               </NavLink>
               <NavLink

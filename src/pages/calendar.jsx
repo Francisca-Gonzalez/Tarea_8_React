@@ -50,22 +50,38 @@ import Container from '@mui/material/Container';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import comidasData from '../bd/comidas.json';
+
 
 const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const Desayuno = ["Avena", "Yogur con frutas y nueces", "Tostadas integrales con PALTA y huevo", "Batido de proteínas", "Tofu revuelto con verduras"]
-  const Almuerzo = ["Ensalada de pollo con verduras frescas", "Salmón a la parrilla con espárragos y quinua", "Tacos de pavo con guacamole y POROTOS negros", "Pasta integral con brócoli y salsa de tomate casera", "Bowl de arroz integral con tofu, PALTA y vegetales asados"]
-  const Cena = ["Salmón al horno con espárragos y quinua", "Ensalada de atún con PALTA y vegetales frescos", "Pollo a la parrilla con brócoli y PAPAS al horno", "Sopa de lentejas con espinacas y pan integral", "Tacos de pavo con lechuga y salsa de PALTA"]
-  const Ingredientes = []
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
   };
 
-  const getRandomOption = (array) => {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
+  // const getRandomOption = (array) => {
+  //   const randomIndex = Math.floor(Math.random() * array.length);
+  //   return array[randomIndex];
+  // };
+  const getDesayuno = (selectedDate, comidasData) => {
+    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+    console.log(matchingEntry)
+    return matchingEntry ? matchingEntry.desayuno : 'No hay información para esta fecha';
   };
+
+  const getAlmuerzo = (selectedDate, comidasData) => {
+    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+    console.log(matchingEntry)
+    return matchingEntry ? matchingEntry.almuerzo : 'No hay información para esta fecha';
+  };
+
+  const getCena = (selectedDate, comidasData) => {
+    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+    console.log(matchingEntry)
+    return matchingEntry ? matchingEntry.cena : 'No hay información para esta fecha';
+  };
+
 
   return (
     <Container>
@@ -77,7 +93,7 @@ const CalendarPage = () => {
           </LocalizationProvider>
         </div>
         <div>
-          <h2>Comida del día</h2>
+          {/* <h2>Comida del día</h2>
           {selectedDate ? (
             <div>
               <p>{selectedDate.toString()}</p>
@@ -87,6 +103,17 @@ const CalendarPage = () => {
             </div>
           ) : (
             <p></p>
+          )} */}
+          <h2>Comida del día</h2>
+          {selectedDate ? (
+            <div>
+              <p>{selectedDate.toString()}</p>
+              <p>{getDesayuno(selectedDate, comidasData)}</p>
+              <p>{getAlmuerzo(selectedDate, comidasData)}</p>
+              <p>{getCena(selectedDate, comidasData)}</p>
+            </div>
+          ) : (
+            <p>Seleccione una fecha en el calendario</p>
           )}
         </div>
       </div>

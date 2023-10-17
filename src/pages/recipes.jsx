@@ -16,6 +16,8 @@ export const RecipesPage = () => {
       <NavBar />
       <SearchBar />
       <h1>Busca por recetas, ingredientes o momentos del día</h1>
+      {/* <button href="/RecetaPages">AAAAA</button> */}
+      <a href="/RecetaPages" class="btn btn-info" role="button">Link Button</a>
     </Container>
 
   )

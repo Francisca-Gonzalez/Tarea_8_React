@@ -6,16 +6,19 @@ import { FaSearch } from "react-icons/fa";
 import NavBar from '../components/nav_bar'
 
 
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 
 
 
-
-export const receta = () => {
-  const url="https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg"
+export const RecetaPages = () => {
+  const url = "https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg"
   const getRandomOption = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
   };
+  const [value, setValue] = React.useState(2);
   const Desayuno = ["Avena", "Yogur con frutas y nueces", "Tostadas integrales con PALTA y huevo", "Batido de proteínas", "Tofu revuelto con verduras"]
   const Ingredientes = [
     "200 gramos de harina",
@@ -44,41 +47,55 @@ export const receta = () => {
       <NavBar />
       <Container sx={"display: flex; margin-top: 150px"}>
         <div>
-        <img src={url}  />
-        <h1>{getRandomOption(Desayuno)}</h1>
-        <button
-          style={{
-            width: '40px',
-            height: '40px',
-            backgroundColor: 'lightblue',
-            borderRadius: '50%',
-            border: 'none',}}>+</button>
-        <h2>Ingredientes:</h2>
+          <img src={url} />
+          <h1>{getRandomOption(Desayuno)}</h1>
+          <Box
+            sx={{
+              '& > legend': { mt: 2 },
+            }}
+          >
+            <Rating
+              name="simple-controlled"
+              value={value}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Box>
+          <button
+            style={{
+              width: '40px',
+              height: '40px',
+              backgroundColor: 'lightblue',
+              borderRadius: '50%',
+              border: 'none',
+            }}>+</button>
+          <h2>Ingredientes:</h2>
 
-        <p>{getRandomOption(Ingredientes)}</p>
-        <p>{getRandomOption(Ingredientes)}</p>
-        <p>{getRandomOption(Ingredientes)}</p>
-        <p>{getRandomOption(Ingredientes)}</p>
-        <p>{getRandomOption(Ingredientes)}</p>
-        <p>{getRandomOption(Ingredientes)}</p>
-        <h2>Preparación:</h2>
-        <p>Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Fusce posuere risus sed justo ornare, 
-          aliquam accumsan mauris venenatis. Etiam nec nunc odio. Nullam elementum rutrum 
-          tellus quis elementum. Integer in elit in est iaculis facilisis sit amet at nisi. 
-          Etiam metus magna, suscipit at mi eu, varius mollis lorem. Sed faucibus risus vel 
-          ullamcorper auctor. Nulla fringilla augue justo, ut imperdiet metus aliquam sed. Aenean 
-          consectetur, elit a ultrices vulputate, nulla urna feugiat est, non elementum quam magna commodo lorem.
-           Donec est dolor, fringilla vitae ultrices eu, congue et ipsum. Nam blandit, diam at cursus gravida,
-            elit sem lacinia tellus, quis blandit purus arcu eget justo. Nam vel vehicula lorem. 
+          <p>{getRandomOption(Ingredientes)}</p>
+          <p>{getRandomOption(Ingredientes)}</p>
+          <p>{getRandomOption(Ingredientes)}</p>
+          <p>{getRandomOption(Ingredientes)}</p>
+          <p>{getRandomOption(Ingredientes)}</p>
+          <p>{getRandomOption(Ingredientes)}</p>
+          <h2>Preparación:</h2>
+          <p>Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Fusce posuere risus sed justo ornare,
+            aliquam accumsan mauris venenatis. Etiam nec nunc odio. Nullam elementum rutrum
+            tellus quis elementum. Integer in elit in est iaculis facilisis sit amet at nisi.
+            Etiam metus magna, suscipit at mi eu, varius mollis lorem. Sed faucibus risus vel
+            ullamcorper auctor. Nulla fringilla augue justo, ut imperdiet metus aliquam sed. Aenean
+            consectetur, elit a ultrices vulputate, nulla urna feugiat est, non elementum quam magna commodo lorem.
+            Donec est dolor, fringilla vitae ultrices eu, congue et ipsum. Nam blandit, diam at cursus gravida,
+            elit sem lacinia tellus, quis blandit purus arcu eget justo. Nam vel vehicula lorem.
             Proin tempor vel mi quis porttitor. Maecenas vulputate facilisis ipsum vel faucibus.
-             Nunc volutpat est at mauris laoreet eleifend.</p>
+            Nunc volutpat est at mauris laoreet eleifend.</p>
         </div>
-        </Container>
-      
-      
+      </Container>
+
+
     </Container>
-    
+
   )
 }
-export default receta
+export default RecetaPages
