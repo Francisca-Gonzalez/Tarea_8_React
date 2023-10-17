@@ -93,24 +93,12 @@ const CalendarPage = () => {
           </LocalizationProvider>
         </div>
         <div>
-          {/* <h2>Comida del día</h2>
+          <h2>Comidas del día</h2>
           {selectedDate ? (
             <div>
-              <p>{selectedDate.toString()}</p>
-              <p>{getRandomOption(Desayuno)}</p>
-              <p>{getRandomOption(Almuerzo)}</p>
-              <p>{getRandomOption(Cena)}</p>
-            </div>
-          ) : (
-            <p></p>
-          )} */}
-          <h2>Comida del día</h2>
-          {selectedDate ? (
-            <div>
-              <p>{selectedDate.toString()}</p>
-              <p>{getDesayuno(selectedDate, comidasData)}</p>
-              <p>{getAlmuerzo(selectedDate, comidasData)}</p>
-              <p>{getCena(selectedDate, comidasData)}</p>
+              <p>Desayuno: {getDesayuno(selectedDate, comidasData)}</p>
+              <p>Almuerzo: {getAlmuerzo(selectedDate, comidasData)}</p>
+              <p>Cena: {getCena(selectedDate, comidasData)}</p>
             </div>
           ) : (
             <p>Seleccione una fecha en el calendario</p>
