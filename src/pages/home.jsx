@@ -9,7 +9,7 @@ export const HomePage = () => {
   const mes = fechaHoy.getMonth() + 1; // Los meses empiezan en 0, así que sumamos 1
   const año = fechaHoy.getFullYear();
 
-// Formatear la fecha como una cadena
+  // Formatear la fecha como una cadena
   const fechaFormateada = `${dia}/${mes}/${año}`;
   return (
     <Container>
@@ -19,9 +19,8 @@ export const HomePage = () => {
           <h1>Hola! esta es tu planificación de hoy: </h1>
           <h2>Desayuno: fideos con salsa</h2>
           <h2>Almuerzo: fideos con salsa</h2>
-          <h2>Once: fideos con salsa</h2>
           <h2>Cena: fideos con salsa</h2>
-          console.log(fechaFormateada)
+          <h2>{fechaFormateada}</h2>
         </div>
       </Container>
     </Container>
