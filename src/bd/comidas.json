@@ -1,0 +1,92 @@
+[
+    {
+        "fecha": "Tue, 17 Oct 2023 03:00:00 GMT",
+        "desayuno": "Avena",
+        "almuerzo": "Ensalada de pollo con verduras frescas",
+        "cena": "Salmón al horno con espárragos y quinua"
+    },
+    {
+        "fecha": "Wed, 18 Oct 2023 03:00:00 GMT",
+        "desayuno": "Tostadas integrales con aguacate y huevo",
+        "almuerzo": "Pasta integral con brócoli y salsa de tomate casera",
+        "cena": "Pollo a la parrilla con brócoli y batatas al horno"
+    },
+    {
+        "fecha": "Thu, 19 Oct 2023 03:00:00 GMT",
+        "desayuno": "Batido de proteínas",
+        "almuerzo": "Bowl de arroz integral con tofu, aguacate y vegetales asados",
+        "cena": "Sopa de lentejas con espinacas y pan integral"
+    },
+    {
+        "fecha": "Fri, 20 Oct 2023 03:00:00 GMT",
+        "desayuno": "Yogur con frutas y nueces",
+        "almuerzo": "Salmón a la parrilla con espárragos y quinua",
+        "cena": "Tacos de pavo con guacamole y frijoles negros"
+    },
+    {
+        "fecha": "Sat, 21 Oct 2023 03:00:00 GMT",
+        "desayuno": "Avena",
+        "almuerzo": "Pollo a la parrilla con brócoli y batatas al horno",
+        "cena": "Tacos de pavo con lechuga y salsa de aguacate"
+    },
+    {
+        "fecha": "Sun, 22 Oct 2023 03:00:00 GMT",
+        "desayuno": "Tofu revuelto con verduras",
+        "almuerzo": "Ensalada de atún con aguacate y vegetales frescos",
+        "cena": "Salmón al horno con espárragos y quinua"
+    },
+    {
+        "fecha": "Mon, 23 Oct 2023 03:00:00 GMT",
+        "desayuno": "Yogur con frutas y nueces",
+        "almuerzo": "Tostadas integrales con aguacate y huevo",
+        "cena": "Sopa de lentejas con espinacas y pan integral"
+    },
+    {
+        "fecha": "Tue, 24 Oct 2023 03:00:00 GMT",
+        "desayuno": "Batido de proteínas",
+        "almuerzo": "Bowl de arroz integral con tofu, aguacate y vegetales asados",
+        "cena": "Tacos de pavo con guacamole y frijoles negros"
+    },
+    {
+        "fecha": "Wed, 25 Oct 2023 03:00:00 GMT",
+        "desayuno": "Tofu revuelto con verduras",
+        "almuerzo": "Pasta integral con brócoli y salsa de tomate casera",
+        "cena": "Salmón al horno con espárragos y quinua"
+    },
+    {
+        "fecha": "Thu, 26 Oct 2023 03:00:00 GMT",
+        "desayuno": "Yogur con frutas y nueces",
+        "almuerzo": "Ensalada de pollo con verduras frescas",
+        "cena": "Salmón al horno con espárragos y quinua"
+    },
+    {
+        "fecha": "Fri, 27 Oct 2023 03:00:00 GMT",
+        "desayuno": "Avena",
+        "almuerzo": "Tacos de pavo con guacamole y frijoles negros",
+        "cena": "Tacos de pavo con lechuga y salsa de aguacate"
+    },
+    {
+        "fecha": "Sat, 28 Oct 2023 03:00:00 GMT",
+        "desayuno": "Tostadas integrales con aguacate y huevo",
+        "almuerzo": "Bowl de arroz integral con tofu, aguacate y vegetales asados",
+        "cena": "Ensalada de atún con aguacate y vegetales frescos"
+    },
+    {
+        "fecha": "Sun, 29 Oct 2023 03:00:00 GMT",
+        "desayuno": "Batido de proteínas",
+        "almuerzo": "Salmón a la parrilla con espárragos y quinua",
+        "cena": "Tacos de pavo con guacamole y frijoles negros"
+    },
+    {
+        "fecha": "Mon, 30 Oct 2023 03:00:00 GMT",
+        "desayuno": "Yogur con frutas y nueces",
+        "almuerzo": "Pasta integral con brócoli y salsa de tomate casera",
+        "cena": "Sopa de lentejas con espinacas y pan integral"
+    },
+    {
+        "fecha": "Tue, 31 Oct 2023 03:00:00 GMT",
+        "desayuno": "Avena",
+        "almuerzo": "Ensalada de pollo con verduras frescas",
+        "cena": "Pollo a la parrilla con brócoli y batatas al horno"
+    }
+]
