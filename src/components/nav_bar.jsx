@@ -102,10 +102,6 @@ function ResponsiveAppBar() {
                 className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
               > Recetas
               </NavLink>
-              {/* <NavLink
-                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/RecetaPages'
-              > Recetaaaaaaa
-              </NavLink> */}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -125,12 +121,7 @@ function ResponsiveAppBar() {
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
             > Recetas
             </NavLink>
-            {/* <NavLink
-              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/RecetaPages'
-            > Recetaaaaaaa
-            </NavLink> */}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -173,27 +164,3 @@ function ResponsiveAppBar() {
   );
 }
 export default ResponsiveAppBar;
-
-
-
-/*export const NavBar = () => {
-  return (
-    <nav className='nav-bar'>
-      <img src={LogoMenu} height={100} alt='logo usm' /><br />
-      <NavLink
-        className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
-        to='/'
-      >
-        Calendario
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`}
-        to='/internal'
-      >
-        Recetas
-      </NavLink>
-    </nav>
-  )
-}
-
-export default NavBar*/
