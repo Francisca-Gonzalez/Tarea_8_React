@@ -5,6 +5,7 @@ import HomePage from '../pages/home'
 import RecipesPage from '../pages/recipes'
 import CalendarPage from '../pages/calendar'
 import RecetaPages from '../pages/receta'
+import ShopListPage from '../pages/listaCompras'
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
         <Route path='/recetas' element={<RecipesPage />} />
         <Route path='/calendario' element={<CalendarPage />} />
         <Route path='/RecetaPages' element={<RecetaPages />} />
+        <Route path='/ListaCompras' element={<ShopListPage />} />
       </Routes>
     </BrowserRouter>
   )

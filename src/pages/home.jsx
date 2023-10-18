@@ -41,11 +41,12 @@ export const HomePage = () => {
       <NavBar />
       <Container sx={"display: flex; margin-top: 150px"}>
         <div>
-          <h1>Hola! esta es tu planificación de hoy: </h1>
+          <h1>Hola! Esta es tu planificación de hoy:</h1>
           <h2>Desayuno: {getDesayuno(buscaJson, comidasData)}</h2>
           <h2>Almuerzo: {getAlmuerzo(buscaJson, comidasData)}</h2>
           <h2>Cena: {getCena(buscaJson, comidasData)}</h2>
           <h2>{fechaFormateada}</h2>
+          <a href="/ListaCompras" class="btn btn-info" role="button">Lista de compras</a>
         </div>
       </Container>
     </Container>

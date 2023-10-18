@@ -47,21 +47,26 @@ export const RecetaPages = () => {
       <NavBar />
       <Container sx={"display: flex; margin-top: 150px"}>
         <div>
-          <img src={url} />
-          <h1>{getRandomOption(Desayuno)}</h1>
-          <Box
-            sx={{
-              '& > legend': { mt: 2 },
-            }}
-          >
-            <Rating
-              name="simple-controlled"
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue);
+          <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
+            <img src={url}/>
+          </div>
+          <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
+            <h1>{getRandomOption(Desayuno)}</h1>
+            <Box
+              sx={{
+                '& > legend': { mt: 2 },
               }}
-            />
-          </Box>
+            >
+              <Rating
+                name="simple-controlled"
+                size="large"
+                value={value}
+                onChange={(event, newValue) => {
+                  setValue(newValue);
+                }}
+              />
+            </Box>
+          </div>
           <button
             style={{
               width: '40px',

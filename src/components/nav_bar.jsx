@@ -12,9 +12,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-
-const settings = ['Perfil', 'Ajustes', 'Cerrar sesión'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,12 +33,15 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar>
+    <AppBar elevation={0} sx={{backgroundColor: '#EAFFD6'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={LogoMenu} height={100} alt='logo menu' /><br />
+          <div style={{paddingRight: '15px', paddingBottom: 0}}>
+            <img src={LogoMenu} height={100} alt='logo menu' /><br />
+          </div>
+          
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -64,7 +64,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="black"
             >
               <MenuIcon />
             </IconButton>
@@ -88,44 +88,42 @@ function ResponsiveAppBar() {
             >
               <NavLink
                 className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
-              > Inicio
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
-              > Hoy
+                style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              > INICIO
               </NavLink>
               <NavLink
                 className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/calendario'
-              > Calendario
+                style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              > CALENDARIO
               </NavLink>
               <NavLink
                 className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
-              > Recetas
+                style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              > RECETAS
               </NavLink>
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, fontSize: '20px', justifyContent: 'space-around-10',  }}>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
-            > Inicio
-            </NavLink>
-            <NavLink
-              className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
-            > Hoy
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+            > INICIO
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/calendario'
-            > Calendario
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+            > CALENDARIO
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
-            > Recetas
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+            > RECETAS
             </NavLink>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0}}>
+                <Avatar sx={{ p: 0, backgroundColor: '#A8FF40'}}/>
               </IconButton>
             </Tooltip>
             <Menu
