@@ -38,14 +38,14 @@ const CalendarPage = () => {
   return (
     <Container>
       <NavBar />
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '120px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '140px' }}>
         <div style={{marginRight: '30px'}}>
-          <LocalizationProvider dateAdapter={AdapterDayjs} >
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
             <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: ''}} sx={{borderRadius: '15px', padding: '10px'}}/>
           </LocalizationProvider>
         </div>
         <div style={{marginLeft: '30px', backgroundColor: 'white', borderRadius: '15px', padding: '10px 40px 10px 40px'}}>
-          <h1 style={{display: 'flex', justifyContent: 'center'}} >Menú del día</h1>
+          <h1 style={{display: 'flex', justifyContent: 'center', marginBottom: '0'}} >Menú del día</h1>
           {selectedDate ? (
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <div>
@@ -62,8 +62,12 @@ const CalendarPage = () => {
                 <h2>Cena</h2>
                 <p>{getCena(selectedDate, comidasData)}</p>
               </div>
+              <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+                <a href="/lista_compras" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none'}}>Ver lista de compras</a>
+              </div>
               
             </div>
+            
           ) : (
             <p>Seleccione una fecha en el calendario</p>
           )}

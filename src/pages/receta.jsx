@@ -48,7 +48,7 @@ export const RecetaPages = () => {
       <Container sx={"display: flex; margin-top: 150px"}>
         <div>
           <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
-            <img src={url}/>
+            <img src={url} style={{borderRadius: '20px'}}/>
           </div>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
             <h1>{getRandomOption(Desayuno)}</h1>
@@ -67,14 +67,18 @@ export const RecetaPages = () => {
               />
             </Box>
           </div>
-          <button
-            style={{
-              width: '40px',
-              height: '40px',
-              backgroundColor: 'lightblue',
-              borderRadius: '50%',
-              border: 'none',
-            }}>+</button>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <button
+              style={{
+                fontSize: '50px',
+                padding: '0 20.3px 0 20.3px',
+                margin: 0,
+                backgroundColor: 'lightblue',
+                borderRadius: '50%',
+                border: 0,
+              }}>+
+            </button>
+          </div>
           <h2>Ingredientes:</h2>
 
           <p>{getRandomOption(Ingredientes)}</p>

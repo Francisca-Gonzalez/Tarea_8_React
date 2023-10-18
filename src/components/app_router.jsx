@@ -14,8 +14,8 @@ const AppRouter = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/recetas' element={<RecipesPage />} />
         <Route path='/calendario' element={<CalendarPage />} />
-        <Route path='/RecetaPages' element={<RecetaPages />} />
-        <Route path='/ListaCompras' element={<ShopListPage />} />
+        <Route path='/receta' element={<RecetaPages />} />
+        <Route path='/lista_compras' element={<ShopListPage />} />
       </Routes>
     </BrowserRouter>
   )
