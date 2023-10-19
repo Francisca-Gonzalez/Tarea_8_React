@@ -1,10 +1,10 @@
+import React from 'react'
 
 import NavBar from '../components/nav_bar'
 
-
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+import { Container } from '@mui/material'
 
 
 
