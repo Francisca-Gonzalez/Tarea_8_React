@@ -103,20 +103,20 @@ function ResponsiveAppBar() {
               </NavLink>
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, fontSize: '20px', justifyContent: 'space-around-10',  }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, fontSize: '20px', justifyContent: 'space-around-3',  }}>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/'
-              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 25px 15px 25px', borderRadius: '8px', textDecoration: 'none' })}
             > INICIO
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/calendario'
-              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 25px 15px 25px', borderRadius: '8px', textDecoration: 'none' })}
             > CALENDARIO
             </NavLink>
             <NavLink
               className={({ isActive }) => `nav-bar__link ${isActive ? 'nav-bar__link--active' : ''}`} to='/recetas'
-              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 35px 15px 35px', borderRadius: '8px', textDecoration: 'none' })}
+              style={({ isActive }) => ({color: 'black', backgroundColor: isActive ? '#D0FFA4' : '#EAFFD6', padding: '10px 25px 15px 25px', borderRadius: '8px', textDecoration: 'none' })}
             > RECETAS
             </NavLink>
           </Box>
