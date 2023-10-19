@@ -8,7 +8,7 @@ import Grid from '@mui/material/Grid';
 import NavBar from '../components/nav_bar'
 import Container from '@mui/material/Container';
 
-import comidasData from '../bd/comidas.json';
+import menusData from '../bd/menus.json';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,20 +26,20 @@ export const HomePage = () => {
   const mes2 = fechaHoy.toString().substring(4, 7)
   const año = fechaHoy.getFullYear();
 
-  const getDesayuno = (selectedDate, comidasData) => {
-    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+  const getDesayuno = (selectedDate, menusData) => {
+    const matchingEntry = menusData.find((entry) => entry.fecha === selectedDate.toString());
     console.log(matchingEntry)
     return matchingEntry ? matchingEntry.desayuno : 'No hay información para esta fecha';
   };
 
-  const getAlmuerzo = (selectedDate, comidasData) => {
-    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+  const getAlmuerzo = (selectedDate, menusData) => {
+    const matchingEntry = menusData.find((entry) => entry.fecha === selectedDate.toString());
     console.log(matchingEntry)
     return matchingEntry ? matchingEntry.almuerzo : 'No hay información para esta fecha';
   };
 
-  const getCena = (selectedDate, comidasData) => {
-    const matchingEntry = comidasData.find((entry) => entry.fecha === selectedDate.toString());
+  const getCena = (selectedDate, menusData) => {
+    const matchingEntry = menusData.find((entry) => entry.fecha === selectedDate.toString());
     console.log(matchingEntry)
     return matchingEntry ? matchingEntry.cena : 'No hay información para esta fecha';
   };
@@ -58,38 +58,38 @@ export const HomePage = () => {
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <Item  sx={{borderRadius: '15px'}}>
+              <Item  sx={{borderRadius: '15px', height: '350px'}}>
                 <h2>Desayuno</h2>
-                <h2>{getDesayuno(buscaJson, comidasData)}</h2>
+                <h2>{getDesayuno(buscaJson, menusData)}</h2>
                 <div>
                   <img src='https://th.bing.com/th/id/R.778541a24f677078b3d4c62e52c0ebc2?rik=fhFb2WKLVf%2f77Q&pid=ImgRaw&r=0' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
                 </div>
                 <div style={{marginBottom: '30px'}}>
-                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none'}}>VER RECETA</a>
+                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
                 </div>
               </Item>
             </Grid>
             <Grid item xs={4}>
-              <Item sx={{borderRadius: '15px'}}>
+            <Item  sx={{borderRadius: '15px', height: '350px'}}>
                 <h2>Almuerzo</h2>
-                <h2>{getAlmuerzo(buscaJson, comidasData)}</h2>
+                <h2>{getAlmuerzo(buscaJson, menusData)}</h2>
                 <div>
                   <img src='https://th.bing.com/th/id/R.345b3282a3a49e8463b28f0f40ee726d?rik=%2bgtA0Tf6UVWdOw&pid=ImgRaw&r=0' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
                 </div>
                 <div style={{marginBottom: '30px'}}>
-                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none'}}>VER RECETA</a>
+                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
                 </div>
               </Item>
             </Grid>
             <Grid item xs={4}>
-              <Item sx={{borderRadius: '15px'}}>
+              <Item  sx={{borderRadius: '15px', height: '350px'}}>
                 <h2>Cena</h2>
-                <h2>{getCena(buscaJson, comidasData)}</h2>
+                <h2>{getCena(buscaJson, menusData)}</h2>
                 <div>
                   <img src='https://th.bing.com/th/id/R.4b3e92888837c958c85dcb3d82d42c95?rik=XO4D2I6LHn%2bm4g&pid=ImgRaw&r=0' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
                 </div>
                 <div style={{marginBottom: '30px'}}>
-                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none'}}>VER RECETA</a>
+                  <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
                 </div>
                 
               </Item>

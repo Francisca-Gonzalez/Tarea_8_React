@@ -13,7 +13,7 @@ export const RecipesPage = () => {
       <NavBar />
       <SearchBar />
       <h1>Busca por recetas, ingredientes o momentos del día</h1>
-      <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E7FFD1', padding: '25px', borderRadius: '15px', alignItems: 'flex-start'}}>
+      <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', borderRadius: '15px', alignItems: 'flex-start'}}>
         <img src={url} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>FIDEOS CON SALSA BOLOÑESA</a>
