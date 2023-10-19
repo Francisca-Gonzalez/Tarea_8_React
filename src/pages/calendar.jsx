@@ -6,7 +6,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import { MdBreakfastDining, MdLunchDining, MdDinnerDining } from 'react-icons/md'
 
-import comidasData from '../bd/comidas.json';
+import comidasData from '../bd/menus.json';
 
 
 const CalendarPage = () => {
