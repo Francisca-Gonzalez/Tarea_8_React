@@ -1,7 +1,3 @@
-import React from 'react'
-import { Button, Container } from '@mui/material'
-import { FaSearch } from "react-icons/fa";
-
 
 import NavBar from '../components/nav_bar'
 
@@ -19,6 +15,7 @@ export const RecetaPages = () => {
     return array[randomIndex];
   };
   const [value, setValue] = React.useState(2);
+  const Momento = ["Desayuno", "Almuerzo", "Cena"]
   const Desayuno = ["Avena", "Yogur con frutas y nueces", "Tostadas integrales con PALTA y huevo", "Batido de proteínas", "Tofu revuelto con verduras"]
   const Ingredientes = [
     "200 gramos de harina",
@@ -79,6 +76,7 @@ export const RecetaPages = () => {
               }}>+
             </button>
           </div>
+          <h2>{getRandomOption(Momento)}</h2>
           <h2>Ingredientes:</h2>
 
           <p>{getRandomOption(Ingredientes)}</p>
@@ -108,3 +106,4 @@ export const RecetaPages = () => {
   )
 }
 export default RecetaPages
+
