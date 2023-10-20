@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+import HashLoader from "react-spinners/HashLoader";
+import Box from '@mui/material/Box';
 
 import NavBar from '../components/nav_bar'
 import Container from '@mui/material/Container';
 
 export const ShopListPage = () => {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  }, [])
   const Ingredientes = [
     "200 gramos de harina",
     "100 gramos de azúcar",
@@ -31,24 +42,40 @@ export const ShopListPage = () => {
     return array[randomIndex];
   };
   return (
-    <Container>
-      <NavBar />
-      <Container sx={"display: flex; margin-top: 150px"}>
-        <div>
-          <h1>Aquí va tu lista de compras de hoy!</h1>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          <p>{getRandomOption(Ingredientes)}</p>
-          </div>
-      </Container>
-    </Container>
+    <div>
+      {
+        loading ?
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px'}}>
+          <HashLoader
+            color={'#000000'}
+            loading={loading}
+            size={150}
+          />
+        </Box>
+
+        :
+        
+        <Container>
+          <NavBar />
+          <Container sx={"display: flex; margin-top: 150px"}>
+            <div>
+              <h1>Lista de compras</h1>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{getRandomOption(Ingredientes)}</p>
+              </div>
+          </Container>
+        </Container>
+      }
+    </div>
+    
   )
 }
 

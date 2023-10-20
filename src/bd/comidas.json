@@ -1,27 +1,33 @@
 [
     {
         "nombre": "Avena con frutas",
-        "tipo": "desayuno"
+        "tipo": "desayuno",
+        "img": "https://th.bing.com/th/id/OIP.ZwXWxL3wpEfywXOJNeGMggHaEJ?pid=ImgDet&rs=1"
     },
     {
         "nombre": "Ensalada de pollo",
-        "tipo": "almuerzo"
+        "tipo": "almuerzo",
+        "img": "https://th.bing.com/th/id/R.97ed5c2a6686d66eacec1a9e15110e34?rik=mHphKlgm5zBBOA&pid=ImgRaw&r=0"
     },
     {
         "nombre": "Salmón a la parrilla con brócoli",
-        "tipo": "cena"
+        "tipo": "cena",
+        "img": "https://fitonutricion.es/wp-content/uploads/2021/10/somon-cu-brocoli.jpg"
     },
     {
         "nombre": "Batido de espinacas y plátano",
-        "tipo": "desayuno"
+        "tipo": "desayuno",
+        "img": "https://th.bing.com/th/id/OIP.FnTsWqkO4ZS4kAiV87uN5gHaFa?pid=ImgDet&rs=1"
     },
     {
         "nombre": "Tofu con vegetales salteados",
-        "tipo": "almuerzo"
+        "tipo": "almuerzo",
+        "img": "https://img-global.cpcdn.com/recipes/63887855afaebe83/751x532cq70/salteado-de-tofu-con-verduras-foto-principal.jpg"
     },
     {
         "nombre": "Ensalada de quinoa",
-        "tipo": "almuerzo"
+        "tipo": "almuerzo",
+        "img": "https://th.bing.com/th/id/OIP.8x4mcxecWmE2pvprUWIDFwHaE8?pid=ImgDet&w=810&h=540&rs=1"
     }
 
 ]
