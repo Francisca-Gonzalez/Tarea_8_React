@@ -57,20 +57,23 @@ export const ShopListPage = () => {
         
         <Container>
           <NavBar />
-          <Container sx={"display: flex; margin-top: 150px"}>
-            <div>
-              <h1>Lista de compras</h1>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
+          <Container sx={"display: flex; margin-top: 150px; flex-direction: column; justify-content: center; align-items: center"}>
+              <div>
+                <h1>Lista de compras</h1>
               </div>
+              <div>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+                <p>{getRandomOption(Ingredientes)}</p>
+              </div>
+              
           </Container>
         </Container>
       }

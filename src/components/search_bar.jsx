@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import Button from '@mui/material/Button';
 
 import comidasData from '../bd/comidas.json';
 
@@ -27,7 +28,7 @@ export const SearchBar = () => {
         value={input}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <button className="search-button" type="button" onClick={fetchData(input, comidasData)}>Buscar</button>
+      <Button className="search-button" type="button" sx={"background-color: #D0FFA4; color: #000000"} onClick={fetchData(input, comidasData)}>Buscar</Button>
     </div>
   )
 }

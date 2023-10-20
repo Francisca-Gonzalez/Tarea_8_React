@@ -10,6 +10,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { Alert, AlertTitle, Collapse, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close"
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -31,7 +33,8 @@ export const RecetaPages = () => {
     }, 1500)
   }, [])
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [openAlert, setOpenAlert] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -40,6 +43,11 @@ export const RecetaPages = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleCloseOpenAlert = () => {
+    setOpen(false);
+    setOpenAlert(true);
+  }
 
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -53,29 +61,12 @@ export const RecetaPages = () => {
     return array[randomIndex];
   };
   const [value, setValue] = React.useState(2);
-  const Momento = ["Desayuno", "Almuerzo", "Cena"]
-  const Desayuno = ["Avena", "Yogur con frutas y nueces", "Tostadas integrales con PALTA y huevo", "Batido de proteínas", "Tofu revuelto con verduras"]
   const Ingredientes = [
-    "200 gramos de harina",
-    "100 gramos de azúcar",
-    "2 huevos",
-    "1 taza de leche",
-    "2 cucharadas de aceite de oliva",
+    "500 gramos de fideos",
+    "1 tarro de salsa de tomate",
+    "200 gramos de carne molida",
     "1 cucharadita de sal",
     "Pimienta al gusto",
-    "3 tomates",
-    "1 cebolla",
-    "2 dientes de ajo",
-    "2 zanahorias",
-    "4 papas",
-    "500 gramos de pollo",
-    "300 gramos de pescado",
-    "Un manojo de cilantro",
-    "2 limones",
-    "50 gramos de mantequilla",
-    "100 gramos de queso",
-    "1 lata de maíz",
-    "1 taza de arroz",
   ];
   return (
     <div>
@@ -95,21 +86,17 @@ export const RecetaPages = () => {
             <div>
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '20px'}}>
                 <img src={url} style={{borderRadius: '20px', marginBottom: '18px'}}/>
-                <h1>{getRandomOption(Desayuno)} / {getRandomOption(Momento)}</h1>
+                <h1>Fideos con salsa / Almuerzo</h1>
               </div>
+              <Box sx={{'& > legend': { mt: 2 }}}>
+                <Collapse in={openAlert}>
+                <Alert variant="outlined" action={<IconButton onClick={()=>{setOpenAlert(false)}}><CloseIcon></CloseIcon></IconButton>}>
+                    <AlertTitle><strong>Enhorabuena</strong></AlertTitle>
+                    Se añadió la comida correctamente.</Alert>
+                </Collapse>
+              </Box>
+              <br></br>
               <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
-                {/* <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <button
-                    style={{
-                      fontSize: '50px',
-                      padding: '0 20.3px 0 20.3px',
-                      margin: 0,
-                      backgroundColor: 'lightblue',
-                      borderRadius: '50%',
-                      border: 0,
-                    }}>+
-                  </button>
-                </div> */}
                 <div>
                   <Button variant="outlined" onClick={handleClickOpen} sx={{borderRadius: '50%', padding: '0 7px 0 7px', fontSize: '40px', color: 'black', border: 'none', backgroundColor: '#A8FF40'}}>
                     +
@@ -121,23 +108,24 @@ export const RecetaPages = () => {
                     aria-describedby="alert-dialog-description"
                   >
                     <DialogTitle id="alert-dialog-title">
-                      {"Use Google's location service?"}
+                      {"Elige el día"}
                     </DialogTitle>
                     <DialogContent>
                     <div style={{marginRight: '30px'}}>
                       <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: ''}} closeOnSelect='true' sx={{borderRadius: '15px', padding: '10px'}}/>
+                        <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: '', cancelLabel: '', okLabel: ''}} closeOnSelect='true' sx={{borderRadius: '15px', padding: '10px'}}/>
                       </LocalizationProvider>
                     </div>
                     </DialogContent>
                     <DialogActions>
                       <Button onClick={handleClose}>Disagree</Button>
-                      <Button onClick={handleClose} autoFocus>
+                      <Button onClick={handleCloseOpenAlert} autoFocus>
                         Agree
                       </Button>
                     </DialogActions>
                   </Dialog>
                 </div>
+                
                 <Box
                   sx={{
                     '& > legend': { mt: 2 },
@@ -157,12 +145,11 @@ export const RecetaPages = () => {
               
               <h2>Ingredientes:</h2>
 
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
-              <p>{getRandomOption(Ingredientes)}</p>
+              <p>{Ingredientes[0]}</p>
+              <p>{Ingredientes[1]}</p>
+              <p>{Ingredientes[2]}</p>
+              <p>{Ingredientes[3]}</p>
+              <p>{Ingredientes[4]}</p>
               <h2>Preparación:</h2>
               <p>Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit. Fusce posuere risus sed justo ornare,

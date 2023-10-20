@@ -95,7 +95,7 @@ export const HomePage = () => {
                   <h2>Almuerzo</h2>
                   <h2>{getAlmuerzo(buscaJson, menusData)}</h2>
                   <div>
-                    <img src='https://th.bing.com/th/id/R.345b3282a3a49e8463b28f0f40ee726d?rik=%2bgtA0Tf6UVWdOw&pid=ImgRaw&r=0' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
+                    <img src='https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
                   </div>
                   <div style={{marginBottom: '30px'}}>
                     <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
@@ -118,16 +118,62 @@ export const HomePage = () => {
             </Grid>
           </Box>
           </Container>
-          <Container sx={{display: 'flex', marginTop: '40px', alignItems: 'center', justifyContent: 'center'}}>
-            <h1>Lista de compras</h1>
+          <Container sx={"display: flex; margin-top: 50px; margin-bottom: 50px; flex-direction: column; justify-content: center; align-items: center"}>
+            <div>
+              <h1>Lista de compras</h1>
+            </div>
+            <div>
+              <h3>1/2 kilo de carne de cerdo</h3>
+              <h3>500 gramos de mantequilla</h3>
+              <h3>2 latas de maíz</h3>
+              <h3>8 papas</h3>
+              <h3>1 kilo de harina</h3>
+              <h3>4 limones</h3>
+            </div>
           </Container>
-          <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-            <h3>1/2 kilo de carne de cerdo</h3>
-            <h3>500 gramos de mantequilla</h3>
-            <h3>2 latas de maíz</h3>
-            <h3>8 papas</h3>
-            <h3>1 kilo de harina</h3>
-            <h3>4 limones</h3>
+          <h1>Sugerencias en base a tus búsquedas recientes:</h1>
+          <Container sx={"display: flex; margin-top: 30px; margin-bottom: 50px"}>
+            <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={4}>
+                  <Item  sx={{borderRadius: '15px', height: '350px'}}>
+                    <h2>Desayuno</h2>
+                    <h2>Tostadas con huevo revuelto</h2>
+                    <div>
+                      <img src='https://th.bing.com/th/id/R.137e25a0a8a2d20ce202d89194aca7e4?rik=ggn0LDVQsO8Qhw&pid=ImgRaw&r=0&sres=1&sresct=1' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
+                    </div>
+                    <div style={{marginBottom: '30px'}}>
+                      <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
+                    </div>
+                  </Item>
+                </Grid>
+                <Grid item xs={4}>
+                <Item  sx={{borderRadius: '15px', height: '350px'}}>
+                    <h2>Almuerzo</h2>
+                    <h2>Arroz con pollo al jugo</h2>
+                    <div>
+                      <img src='https://i0.wp.com/www.cronicadigital.cl/imagenes/noticias/2015/03/ArrozPollo.jpg?resize=640%2C480' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
+                    </div>
+                    <div style={{marginBottom: '30px'}}>
+                      <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
+                    </div>
+                  </Item>
+                </Grid>
+                <Grid item xs={4}>
+                  <Item  sx={{borderRadius: '15px', height: '350px'}}>
+                    <h2>Cena</h2>
+                    <h2>Crema de choclo</h2>
+                    <div>
+                      <img src='https://d1uz88p17r663j.cloudfront.net/original/469f92712f3e459fe67712ed3ee61f0d_Crema_de_Choclo.jpg' style={{width: '220px', height: '120px', marginBottom: '30px'}}/>
+                    </div>
+                    <div style={{marginBottom: '30px'}}>
+                      <a href="/receta" class="btn btn-info" role="button" style={{backgroundColor: '#D0FFA4', padding: '10px', borderRadius: '12px', textDecoration: 'none', color: 'black'}}>VER RECETA</a>
+                    </div>
+                    
+                  </Item>
+                </Grid>
+              </Grid>
+            </Box>
           </Container>
         </Container>
       }

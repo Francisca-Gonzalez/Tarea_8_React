@@ -36,21 +36,21 @@ export const RecipesPage = () => {
           <SearchBar />
           
           <h1>Busca por recetas, ingredientes o momentos del día</h1>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', borderRadius: '15px', alignItems: 'flex-start'}}>
+          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
             <img src={url} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
             <div style={{display: 'flex', flexDirection: 'column'}}>
-              <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>FIDEOS CON SALSA BOLOÑESA</a>
+              <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>FIDEOS CON SALSA</a>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', borderRadius: '15px', alignItems: 'flex-start'}}>
+          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
             <img src={url2} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>POLLO CON PAPAS</a>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', borderRadius: '15px', alignItems: 'flex-start'}}>
+          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
             <img src={url3} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
             <div style={{display: 'flex', flexDirection: 'column'}}>
               <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>AVENA</a>
