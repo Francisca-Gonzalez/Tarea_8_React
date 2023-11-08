@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Alert, AlertTitle, Collapse, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close"
@@ -16,6 +15,7 @@ import CloseIcon from "@mui/icons-material/Close"
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 
 import NavBar from '../components/nav_bar'
 
@@ -24,6 +24,7 @@ import NavBar from '../components/nav_bar'
 
 
 export const RecetaPages = () => {
+  
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -53,6 +54,7 @@ export const RecetaPages = () => {
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
+    console.log(selectedDate);
   };
 
   const url = "https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg"
@@ -113,7 +115,8 @@ export const RecetaPages = () => {
                     <DialogContent>
                     <div style={{marginRight: '30px'}}>
                       <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: '', cancelLabel: '', okLabel: ''}} closeOnSelect='true' sx={{borderRadius: '15px', padding: '10px'}}/>
+                        {/* <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: ''}} closeOnSelect='true' sx={{borderRadius: '15px', padding: '10px'}}/> */}
+                        <DateCalendar views={['day']} onChange={handleDateChange}/>
                       </LocalizationProvider>
                     </div>
                     </DialogContent>

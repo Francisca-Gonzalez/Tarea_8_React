@@ -17,7 +17,7 @@ module.exports = (_, argv) => ({
     })
   ],
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['.*', '.js', '.jsx']
   },
   module: {
     rules: [

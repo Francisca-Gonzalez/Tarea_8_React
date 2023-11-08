@@ -36,26 +36,12 @@ function ResponsiveAppBar() {
     <AppBar elevation={0} sx={{backgroundColor: '#EAFFD6'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <div style={{paddingRight: '15px', paddingBottom: 0}}>
-            <img src={LogoMenu} height={100} alt='logo menu' /><br />
+          <div style={{paddingRight: '15px', paddingBottom: 0, marginRight: '20px'}}>
+            <a href='/'>
+              <img src={LogoMenu} height={100} alt='logo menu'  /><br />
+            </a>
           </div>
           
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
