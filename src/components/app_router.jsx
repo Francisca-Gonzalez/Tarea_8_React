@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from '../pages/home'
 import RecipesPage from '../pages/recipes'
 import CalendarPage from '../pages/calendar'
+import Calendar2Page from '../pages/calendar2'
 import RecetaPages from '../pages/receta'
 import ShopListPage from '../pages/listaCompras'
 
@@ -14,6 +15,7 @@ const AppRouter = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/recetas' element={<RecipesPage />} />
         <Route path='/calendario' element={<CalendarPage />} />
+        <Route path='/caIendario' element={<Calendar2Page />} />
         <Route path='/receta' element={<RecetaPages />} />
         <Route path='/lista_compras' element={<ShopListPage />} />
       </Routes>

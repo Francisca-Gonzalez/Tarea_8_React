@@ -91,20 +91,22 @@ export const RecetaPages = () => {
             <Container sx={"display: flex; margin-top: 150px"}>
               <div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                  <h1 style={{ fontSize: '50px' }}>Fideos con salsa / Almuerzo</h1>
                   <img src={url} style={{ borderRadius: '20px', marginBottom: '18px' }} />
-                  <h1>Fideos con salsa / Almuerzo</h1>
                 </div>
                 <Box sx={{ '& > legend': { mt: 2 } }}>
                   <Collapse in={openAlert}>
-                    <Alert variant="outlined" action={<IconButton onClick={() => { setOpenAlert(false) }}><CloseIcon></CloseIcon></IconButton>}>
-                      <AlertTitle><strong>Enhorabuena</strong></AlertTitle>
-                      Se añadió la comida correctamente.</Alert>
+                    <Alert variant="outlined" action={<IconButton onClick={() => { setOpenAlert(false) }}><CloseIcon></CloseIcon></IconButton>} sx={{ fontSize: '20px' }}>
+                      <AlertTitle sx={{ fontSize: '30px' }}><strong>Enhorabuena</strong></AlertTitle>
+                      Se añadió la comida correctamente.
+                      <a href="/caIendario" className="search-button" type="button" sx={"background-color: #D0FFA4; color: #000000"}>   Ver calendario</a>
+                    </Alert>
                   </Collapse>
                 </Box>
                 <br></br>
                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
                   <div>
-                    <Button variant="outlined" onClick={handleClickOpen} sx={{ borderRadius: '50%', padding: '0 7px 0 7px', fontSize: '40px', color: 'black', border: 'none', backgroundColor: '#A8FF40' }}>
+                    <Button onClick={handleClickOpen} sx={{ borderRadius: '50%', padding: '0 7px 0 7px', fontSize: '40px', color: 'black', border: 'none', backgroundColor: '#A8FF40' }}>
                       +
                     </Button>
                     <Dialog
