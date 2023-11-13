@@ -24,7 +24,7 @@ export const SearchBar = () => {
     <div className="input-wrapper">
        <FaSearch id="search-icon" color="#B5B5B5"/>
       <input
-        placeholder=" Type to search..."
+        placeholder=" Busca por recetas, ingredientes o momentos del día"
         value={input}
         onChange={(e) => handleChange(e.target.value)}
       />
