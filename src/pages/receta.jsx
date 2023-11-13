@@ -14,9 +14,10 @@ import CloseIcon from "@mui/icons-material/Close"
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+// import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 
+// import comidasData from '../bd/menus.json';
 import NavBar from '../components/nav_bar'
 
 
@@ -58,10 +59,10 @@ export const RecetaPages = () => {
   };
 
   const url = "https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg"
-  const getRandomOption = (array) => {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-  };
+  // const getRandomOption = (array) => {
+  //   const randomIndex = Math.floor(Math.random() * array.length);
+  //   return array[randomIndex];
+  // };
   const [value, setValue] = React.useState(2);
   const Ingredientes = [
     "500 gramos de fideos",
@@ -119,12 +120,14 @@ export const RecetaPages = () => {
                         <div style={{ marginRight: '30px' }}>
                           <LocalizationProvider dateAdapter={AdapterDayjs}>
                             {/* <StaticDatePicker onChange={handleDateChange} localeText={{toolbarTitle: ''}} closeOnSelect='true' sx={{borderRadius: '15px', padding: '10px'}}/> */}
-                            <DateCalendar views={['day']} onChange={handleDateChange} />
+                            <DateCalendar views={['day']} disablePast='true' onChange={handleDateChange} />
                           </LocalizationProvider>
                         </div>
                       </DialogContent>
                       <DialogActions>
-                        <Button onClick={handleClose}>Disagree</Button>
+                        <Button onClick={handleClose}>
+                          Disagree
+                        </Button>
                         <Button onClick={handleCloseOpenAlert} autoFocus>
                           Agree
                         </Button>

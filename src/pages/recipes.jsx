@@ -18,46 +18,48 @@ export const RecipesPage = () => {
 
   const url = "https://i.blogs.es/927bbe/salsa-pasta/840_560.jpg"
   const url2 = "https://tofuu.getjusto.com/orioneat-local/resized2/zRZZx7uobtDFtm69o-1200-1200.webp"
-  const url3="https://cdn0.recetasgratis.net/es/posts/6/2/7/avena_con_leche_73726_600_square.jpg"
+  const url3 = "https://cdn0.recetasgratis.net/es/posts/6/2/7/avena_con_leche_73726_600_square.jpg"
   return (
     <div>
       {
         loading ?
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px'}}>
-          <HashLoader
-            color={'#000000'}
-            loading={loading}
-            size={150}
-          />
-        </Box>
-        :
-        <Container>
-          <NavBar />
-          <SearchBar />
-          
-          <h1>Busca por recetas, ingredientes o momentos del día</h1>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
-            <img src={url} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>FIDEOS CON SALSA</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px' }}>
+            <HashLoader
+              color={'#000000'}
+              loading={loading}
+              size={150}
+            />
+          </Box>
+          :
+          <Container>
+            <NavBar />
+            <SearchBar />
+            <div style={{ textAlign: 'center' }}>
+              <h1>Recetas recomendadas</h1>
             </div>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
-            <img src={url2} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>POLLO CON PAPAS</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start' }}>
+              <img src={url} style={{ width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px' }} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="/receta" class="btn btn-info" role="button" style={{ textDecoration: 'none', fontSize: '25px' }}>Fideos con Salsa</a>
+                <p>Deliciosos fideos al dente acompañados de una salsa casera, hecha con tomates frescos y hierbas aromáticas. Una combinación perfecta de suavidad y sabor que te hará disfrutar cada bocado.</p>
+              </div>
             </div>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start'}}>
-            <img src={url3} style={{width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px'}}/>
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <a href="/receta" class="btn btn-info" role="button" style={{textDecoration: 'none'}}>AVENA</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start' }}>
+              <img src={url2} style={{ width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px' }} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="/receta" class="btn btn-info" role="button" style={{ textDecoration: 'none', fontSize: '25px' }}>Pollo con Papas</a>
+                <p>El pollo asado a la perfección, con su piel crujiente y su jugosidad inigualable, se combina con papas tiernas y doradas, cocidas a la perfección. Un plato reconfortante que te ofrece la calidez de los sabores caseros en cada bocado.</p>
+              </div>
             </div>
-          </div>
-        </Container>
+            <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#E3FFC8', padding: '25px', marginBottom: '35px', borderRadius: '15px', alignItems: 'flex-start' }}>
+              <img src={url3} style={{ width: '150px', height: '150px', marginRight: '25px', borderRadius: '15px' }} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="/receta" class="btn btn-info" role="button" style={{ textDecoration: 'none', fontSize: '25px' }}>Avena</a>
+                <p>Una avena suculenta y reconfortante, cocinada a la perfección y adornada con tus frutas favoritas, nueces crujientes y un toque de miel dorada. Un abrazo cálido para tu día, listo para despertar tus sentidos con su dulzura reconfortante.</p>
+              </div>
+            </div>
+          </Container>
       }
     </div>
   )
